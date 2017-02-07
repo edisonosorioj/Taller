@@ -1,0 +1,7 @@
+ALTER TABLE `taller`.`repuestos` 
+ADD COLUMN `articulo` VARCHAR(100) NULL AFTER `caja`,
+ADD COLUMN `ecg` INT(11) NULL AFTER `articulo`,
+ADD COLUMN `precio` INT(10) NULL AFTER `ecg`,
+ADD COLUMN `categoria` INT(5) NULL AFTER `precio`,
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`id`, `ecg`);
