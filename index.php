@@ -8,9 +8,19 @@
  <div>
  	<form>
  		<label>Buscar:</label>
- 		<input type="text" name="buscar">
- 		<input type="input" name="buscar">
+ 		<input type="text" name="buscar" placeholder="Texto">
+ 		<input type="submit" name="buscar">
  	</form>
+ </div>
+ <div>
+ 	<table>
+ 		<td>
+ 			<tr></tr>
+ 			<tr></tr>
+ 			<tr></tr>
+ 			<tr></tr>
+ 		</td>
+ 	</table>
  </div>
 </body>
 </html>
