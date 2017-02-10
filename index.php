@@ -21,34 +21,36 @@ $query = mysqli_query($result,'select * from repuestos');
 
 
 $html = "<!DOCTYPE html>
-<html>
-<head>
-	<meta charset='UTF-8' />
-	<title>Softaller</title>
-	<link rel='stylesheet' href='css/estilo.css' />
-</head>
-<body>
- <h1>Centro Electrónico</h1>
- <div>
- 	<form>
- 		<label>Buscar:</label>
- 		<input type='text' name='buscar' placeholder='Texto'>
- 		<input type='submit' name='buscar'>
- 	</form>
- </div>
- <div id='table'>
- 	<table>
- 		<tr>
- 			<td>ID</td>
- 			<td>Caja</td>
- 			<td>Articulo</td>
- 			<td>ECG</td>
- 			<td>Precio</td>
- 		</tr>
-		. $tr . 
- 	</table>
- </div>
-</body>
-</html>";
+		<html>
+		<head>
+			<meta charset='UTF-8' />
+			<script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+			<script src='http://code.jquery.com/jquery-migrate-1.2.1.min.js'></script>
+			<script src='http://code.jquery.com/ui/1.11.3/jquery-ui.min.js'></script>
+			<title>Softaller</title>
+			<link rel='stylesheet' href='css/estilo.css' />
+		</head>
+		<body>
+		 <h1>Centro Electrónico</h1>
+		 <div>
+		 	<form>
+		 		<label>Buscar: </label><input type='text' id='search' />
+		 	</form>
+		 </div>
+		 <div id='table'>
+		 	<table id='table_result'>
+		 		<tr>
+		 			<td>ID</td>
+		 			<td>Caja</td>
+		 			<td>Articulo</td>
+		 			<td>ECG</td>
+		 			<td>Precio</td>
+		 		</tr>
+				. $tr . 
+		 	</table>
+		 </div>
+		</body>
+		<script src='js/acciones.js'></script>
+		</html>";
 
 echo $html;
