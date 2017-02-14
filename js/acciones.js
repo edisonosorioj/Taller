@@ -18,3 +18,12 @@ $.extend($.expr[":"],
 		return (elem.textContent || elem.innerText || $(elem).text() || "").toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
 	}
 });
+
+$( '#1' ).click(function( event ) {
+  event.preventDefault();
+  $( '#detalles' ).show('slow');
+});
+$( '#2' ).click(function( event ) {
+  event.preventDefault();
+  $( '#detalles' ).hide('slow');
+});

@@ -10,15 +10,19 @@ $query = mysqli_query($result,'select * from repuestos');
  while ($row = $query->fetch_array(MYSQLI_BOTH)){
 
  	$tr .=	"<tr class='rows' id='rows'>
+				<div>
 				<td>" . $row['id'] 			. "</td>
 				<td>" . $row['caja'] 		. "</td>
-				<td>" . $row['articulo'] 	. "</td>
+				<td><a href='#' id='1'>" . $row['articulo'] 	. "</a></td>
 				<td>" . $row['ecg'] 		. "</td>
 				<td>" . $row['precio'] 		. "</td>
-			</tr>";
-
+				</div>
+			</tr>
+			<tr style='display:none' id='detalles'>
+			<td colspan='5'>" . $row['id'] 	. "<label> Detalles de la tabla</label><a href='#' id='2'>Cerrar</a></td>
+			</tr>
+			";
  }
-
 
 $html = "<!DOCTYPE html>
 		<html>
@@ -45,12 +49,15 @@ $html = "<!DOCTYPE html>
 		 			<td>Articulo</td>
 		 			<td>ECG</td>
 		 			<td>Precio</td>
-		 		</tr>
+		 		</tr>"
 				. $tr . 
-		 	</table>
+		 	"</table>
 		 </div>
 		</body>
 		<script src='js/acciones.js'></script>
+		<script>
+
+		</script>
 		</html>";
 
 echo $html;
